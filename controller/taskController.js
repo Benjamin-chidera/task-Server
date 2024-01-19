@@ -23,10 +23,10 @@ const getATask = async (req, res) => {
 };
 
 const createTask = async (req, res) => {
-  const { title, description } = req.body;
+  const { title } = req.body;
 
   try {
-    if (!title || !description) {
+    if (!title) {
       res.status(404).json({ message: "please fill all inputs" });
     }
     const task = await Task.create(req.body);
