@@ -8,17 +8,6 @@ const taskSchema = new Schema(
       required: true,
       unique: true,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-    progress: {
-      type: Number,
-      required: true,
-      default: 0,
-      min: 0,
-      max: 100,
-    },
   },
   { timestamps: true }
 );
